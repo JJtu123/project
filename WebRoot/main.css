@@ -1,0 +1,379 @@
+@charset "UTF-8";
+.col{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.header {
+    line-height: 62px;
+    background-color: #1f2233;
+    left:0;
+    color: #fff;
+    font-size: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+.header__inner {
+    position: relative;
+    width: 1268px;
+    margin: 0 auto;
+}
+.header__navwrap {
+    display: inline-block;
+    vertical-align: top;
+}
+.header__navbar {
+    line-height: 20px;
+    font-size: 0;
+}
+.header__navitem {
+    display: inline-block;
+    padding: 21px 0;
+    width: 68px;
+    height: 62px;
+    text-align: center;
+    vertical-align: top;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+}
+.header__right {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+}
+.header__search {
+    font-size: 14px;
+    height: 30px;
+    margin-top: 16px;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, .22);
+    padding: 0 35px 0 15px;
+    border-radius: 15px;
+    position: relative;
+    margin-right: 15px;
+}
+.header__search input {
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-transition: width 300ms ease;
+    -o-transition: width 300ms ease;
+    transition: width 300ms ease;
+}
+.header__search .icon {
+    position: absolute;
+    right: 8px;
+    height: 16px;
+    width: 17px;
+    top: 7px;
+    font-size: inherit;
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    background: url(https://g.csdnimg.cn/common/csdn-toolbar/images/csdn-white-search.png);
+    background-position: center center;
+	background-size: 100% 100%;
+}
+.icon {
+    font-size: inherit;
+}
+.header__avatarwrp {
+    display: block;
+    padding: 13px 20px;
+}
+.header__avatar {
+    height: 36px;
+    width: 36px;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: block;
+    position: relative;
+}
+.header__avatar img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 100%;
+    border-style: none;
+}
+button {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    outline: 0;
+    border: 0 none;
+    border-radius: 2px 16px 16px 2px;
+    font-size: 14px;
+    line-height: 32px;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    background-color: blue;
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    outline:none;
+}
+.header__avatarcontainer:hover .header__navitem--show {
+    display:block;
+}
+.header__navitem--account {
+    display: block;
+    width: 95px;
+    padding-bottom: 0;
+    padding-left:0;
+}
+.header__navitem--show{
+    display: none;
+    position: absolute;
+    color:black;
+    top: 48px;
+    right:0;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    list-style:none;
+    background-color:white;
+}
+.sp{
+	display:inline-block;
+	text-decoration:none;
+	position:absolute;
+	height:100%;
+	left:3px;
+	right:3px;
+	font-size:16px;
+	color:black;
+	text-align:center;
+}
+.header__userInfo{
+    position: relative;
+    height:59px;
+    width:100%;
+   border-bottom: 1px solid #f0f0f0;
+}
+#my_messages{
+	position:relative;
+	height:62px;
+	width:30px;
+	display:block;
+	cursor:pointer;
+}
+.message_box{
+	vertical-align:middle;
+	width:28px;
+}
+
+/* 新添加的部分 */
+.headline {
+    margin-top: 100px; /* 与导航栏的距离 */
+    padding: 20px;
+    font-size: 24px;
+}
+
+.slideshow-container {
+    margin-top: 80px; /* 与“今日要闻”标题的距离 */
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* 自动轮播样式 */
+.slideshow-container{
+	width:1200px;
+	height:400px;
+	/* 轮播图居中 */
+	margin:1rem auto;
+	/* 隐藏超出展示容器的内容 */
+	overflow: hidden;
+	position: relative;
+}
+
+.slideshow-container .slideshow-img-container {
+	width:6000px;
+	height:400px;
+	overflow: hidden;
+	position: absolute;
+	/* 开启弹性盒，让图片横向排列 */
+	display: flex;
+	animation: run 10s ease infinite;
+}
+
+.slideshow-container .slideshow-img-container img {
+	width:1200px;
+	height:100%;
+}
+
+/* 动画关键帧 */
+@keyframes run {
+	0%,10%{
+		/* margin-left: 0; */
+		transform: translateX(0);
+	}
+	20%,30%{
+		/* margin-left: -1200px;; */
+		transform: translateX(-1200px);
+	}
+	40%,50%{
+		/* margin-left: -2400px; */
+		transform: translateX(-2400px);
+	}
+	60%,70%{
+		/* margin-left: -3600px; */
+		transform: translateX(-3600px);
+	}
+	80%,90%{
+		/* margin-left: -4800px; */
+		transform: translateX(-4800px);
+	}
+	100%{
+		/* margin-left: 0; */
+		transform: translateX(0);
+	}
+}
+
+
+.recommended-teachers {
+    margin-top: 80px; /* 确保推荐栏不被导航栏遮挡 */
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.teacher-card {
+    display: flex;
+    flex-wrap: wrap; /* 换行 */
+    overflow: hidden; /* 溢出部分隐藏 */
+    /*max-height: 600px; /* 一行的高度 */
+    padding: 20px 0;
+    justify-content: flex-start; /* 从左到右依次显示 */
+    /* justify-content: space-between; */
+}
+
+.teacher-card .teacher {
+   position:relative;
+    width: calc(12.5% - 20px); /* 一行最多显示8个教师，即每个教师显示块的宽度为12.5% */
+    width: 254px; /* 每个教师显示块的固定宽度为200px */
+    margin-right: 20px; /* 相邻教师显示块之间的间距 */
+    margin-bottom: 20px;
+    background-color: #add8e6; /* 浅蓝色背景 */
+    padding: 20px;
+    border-radius: 5px;
+    flex-shrink: 0; /* 防止缩小以适应空间 */
+    display: none; /* 默认隐藏 */
+    height:420px;
+}
+
+.teacher-card .teacher:nth-child(-n+5) {
+    display: block; /* 仅显示前8个教师 */
+}
+
+.teacher-card .teacher img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* 将头像的边框半径设置为50%，使其呈现圆形 */
+}
+
+.more-teachers {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.recommended-students {
+    margin-top: 80px; /* 确保推荐栏不被导航栏遮挡 */
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.student-card {
+    display: flex;
+    flex-wrap: wrap; /* 换行 */
+    overflow: hidden; /* 溢出部分隐藏 */
+    /*max-height: 600px; /* 一行的高度 */
+    padding: 20px 0;
+    justify-content: flex-start; /* 从左到右依次显示 */
+    /* justify-content: space-between; */
+}
+
+.student-card .student {
+	position:relative;
+    width: calc(12.5% - 20px); /* 一行最多显示8个教师，即每个教师显示块的宽度为12.5% */
+    width: 254px; /* 每个教师显示块的固定宽度为200px */
+    margin-right: 20px; /* 相邻教师显示块之间的间距 */
+    margin-bottom: 20px;
+    background-color: #add8e6; /* 浅蓝色背景 */
+    padding: 20px;
+    border-radius: 5px;
+    flex-shrink: 0; /* 防止缩小以适应空间 */
+    display: none; /* 默认隐藏 */
+    height:420px;
+}
+
+.student-card .student:nth-child(-n+5) {
+    display: block; /* 仅显示前8个教师 */
+}
+
+.student-card .student img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* 将头像的边框半径设置为50%，使其呈现圆形 */
+}
+
+.more-students {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.view-detail-button {
+    background-color: #007bff; /* 蓝色背景 */
+    color: #fff; /* 白色文字 */
+    padding: 8px 16px; /* 设置内边距 */
+    border-radius: 5px; /* 圆角边框 */
+    text-decoration: none; /* 去除下划线 */
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+    position:absolute;
+    bottom:20px;
+}
+.salary{
+	position:absolute;
+	bottom:50px;
+}
+.courses{
+	position:absolute;
+	top:178px;
+}
+.course_items{
+	position:absolute;
+	top:199px;
+}
+.view-detail:hover {
+    background-color: #0056b3; /* 鼠标悬停时的背景色 */
+}
+
+.teacherHead {
+	
+}
+
+.studentHead {
+	
+}

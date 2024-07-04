@@ -1,0 +1,317 @@
+/* search.css */
+@charset "UTF-8";
+.col{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.header {
+    line-height: 62px;
+    background-color: #1f2233;
+    left:0;
+    color: #fff;
+    font-size: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+.header__inner {
+    position: relative;
+    width: 1268px;
+    margin: 0 auto;
+}
+.header__navwrap {
+    display: inline-block;
+    vertical-align: top;
+}
+.header__navbar {
+    line-height: 20px;
+    font-size: 0;
+}
+.header__navitem {
+    display: inline-block;
+    padding: 21px 0;
+    width: 68px;
+    height: 62px;
+    text-align: center;
+    vertical-align: top;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+}
+.header__right {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+}
+.header__search {
+    font-size: 14px;
+    height: 30px;
+    margin-top: 16px;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, .22);
+    padding: 0 35px 0 15px;
+    border-radius: 15px;
+    position: relative;
+    margin-right: 15px;
+}
+.header__search input {
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-transition: width 300ms ease;
+    -o-transition: width 300ms ease;
+    transition: width 300ms ease;
+}
+.header__search .icon {
+    position: absolute;
+    right: 8px;
+    height: 16px;
+    width: 17px;
+    top: 7px;
+    font-size: inherit;
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    background: url(https://g.csdnimg.cn/common/csdn-toolbar/images/csdn-white-search.png);
+    background-position: center center;
+	background-size: 100% 100%;
+}
+.icon {
+    font-size: inherit;
+}
+.header__avatarwrp {
+    display: block;
+    padding: 13px 20px;
+}
+.header__avatar {
+    height: 36px;
+    width: 36px;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: block;
+    position: relative;
+}
+.header__avatar img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 100%;
+    border-style: none;
+}
+button {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    outline: 0;
+    border: 0 none;
+    border-radius: 2px 16px 16px 2px;
+    font-size: 14px;
+    line-height: 32px;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    background-color: blue;
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    outline:none;
+}
+.header__avatarcontainer:hover .header__navitem--show {
+    display:block;
+}
+.header__navitem--account {
+    display: block;
+    width: 95px;
+    padding-bottom: 0;
+    padding-left:0;
+}
+.header__navitem--show{
+    display: none;
+    position: absolute;
+    color:black;
+    top: 48px;
+    right:0;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    list-style:none;
+    background-color:white;
+}
+.sp{
+	display:inline-block;
+	text-decoration:none;
+	position:absolute;
+	height:100%;
+	left:3px;
+	right:3px;
+	font-size:16px;
+	color:black;
+	text-align:center;
+}
+.header__userInfo{
+    position: relative;
+    height:59px;
+    width:100%;
+   border-bottom: 1px solid #f0f0f0;
+}
+.message_box #my_messages{
+	position:relative;
+	height:62px;
+	width:30px;
+	display:block;
+	cursor:pointer;
+}
+.message_box{
+	vertical-align:middle;
+	width:28px;
+}
+/* 新添加的部分 */
+.search-results {
+    margin-top: 80px; /* 确保搜索内容不被导航栏遮挡 */
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 修改为从左到右排列 */
+}
+
+.teacher-card {
+	position:relative;
+    width: 200px; /* 固定每个学生显示卡片的宽度 */
+    height: 222px; /* 固定每个学生显示卡片的高度 */
+    margin-right: 23px; /* 调整学生显示卡片之间的右侧间距 */
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.teacher-card:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大1.05倍 */
+}
+
+.teacher-card a {
+    text-decoration: none; /* 去除链接默认下划线 */
+    color: inherit; /* 继承父元素文本颜色 */
+    width: 100%; /* 使链接占据整个卡片的点击区域 */
+    height:100%;
+}
+
+.teacher-avatar {
+	position:absolute;
+	top:10px;
+    width: 50px; /* 调整学生头像的宽度 */
+    height: 50px; /* 调整学生头像的高度 */
+    margin-right: 20px;
+    border-radius: 50%; /* 将头像设置为圆形 */
+    overflow: hidden; /* 隐藏超出头像容器的部分 */
+}
+
+.teacher-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 缩放图片以填充容器，并裁剪超出部分 */
+}
+
+.teacher-info {
+    flex: 1;
+}
+
+.teacher-info p {
+    margin-bottom: 10px;
+}
+
+.teacher-info p:last-child {
+    margin-bottom: 0;
+}
+
+.student-card {
+	position:relative;
+    width: 200px; /* 固定每个学生显示卡片的宽度 */
+    height: 222px; /* 固定每个学生显示卡片的高度 */
+    margin-right: 23px; /* 调整学生显示卡片之间的右侧间距 */
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.student-card:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大1.05倍 */
+}
+
+.student-card a {
+    text-decoration: none; /* 去除链接默认下划线 */
+    color: inherit; /* 继承父元素文本颜色 */
+    width: 100%; /* 使链接占据整个卡片的点击区域 */
+    height:100%;
+}
+
+.student-avatar {
+	position:absolute;
+	top:10px;
+    width: 50px; /* 调整学生头像的宽度 */
+    height: 50px; /* 调整学生头像的高度 */
+    margin-right: 20px;
+    border-radius: 50%; /* 将头像设置为圆形 */
+    overflow: hidden; /* 隐藏超出头像容器的部分 */
+}
+
+.student-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 缩放图片以填充容器，并裁剪超出部分 */
+}
+
+.student-info {
+    flex: 1;
+}
+
+.student-info p {
+    margin-bottom: 10px;
+}
+
+.student-info p:last-child {
+    margin-bottom: 0;
+}
+.location{
+	position:absolute;
+	top:50px;
+}
+.courses{
+	position:absolute;
+	top:95px;
+}
+.course_item{
+	position:absolute;
+	top:118px;
+}
+.salary{
+	position:absolute;
+	bottom:30px;
+}

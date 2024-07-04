@@ -1,0 +1,319 @@
+/* teacherDetails.css */
+@charset "UTF-8";
+.col{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.header {
+    line-height: 62px;
+    background-color: #1f2233;
+    left:0;
+    color: #fff;
+    font-size: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+.header__inner {
+    position: relative;
+    width: 1268px;
+    margin: 0 auto;
+}
+.header__navwrap {
+    display: inline-block;
+    vertical-align: top;
+}
+.header__navbar {
+    line-height: 20px;
+    font-size: 0;
+}
+.header__navitem {
+    display: inline-block;
+    padding: 21px 0;
+    width: 68px;
+    height: 62px;
+    text-align: center;
+    vertical-align: top;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+}
+.header__right {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+}
+.header__search {
+    font-size: 14px;
+    height: 30px;
+    margin-top: 16px;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, .22);
+    padding: 0 35px 0 15px;
+    border-radius: 15px;
+    position: relative;
+    margin-right: 15px;
+}
+.header__search input {
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-transition: width 300ms ease;
+    -o-transition: width 300ms ease;
+    transition: width 300ms ease;
+}
+.header__search .icon {
+    position: absolute;
+    right: 8px;
+    height: 16px;
+    width: 17px;
+    top: 7px;
+    font-size: inherit;
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    background: url(https://g.csdnimg.cn/common/csdn-toolbar/images/csdn-white-search.png);
+    background-position: center center;
+	background-size: 100% 100%;
+}
+.icon {
+    font-size: inherit;
+}
+.header__avatarwrp {
+    display: block;
+    padding: 13px 20px;
+}
+.header__avatar {
+    height: 36px;
+    width: 36px;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: block;
+    position: relative;
+}
+.header__avatar img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 100%;
+    border-style: none;
+}
+button {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    top: 0;
+    outline: 0;
+    border: 0 none;
+    border-radius: 2px 16px 16px 2px;
+    font-size: 14px;
+    line-height: 32px;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    background-color: blue;
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    outline:none;
+}
+.header__avatarcontainer:hover .header__navitem--show {
+    display:block;
+}
+.header__navitem--account {
+    display: block;
+    width: 95px;
+    padding-bottom: 0;
+    padding-left:0;
+}
+.header__navitem--show{
+    display: none;
+    position: absolute;
+    color:black;
+    top: 48px;
+    right:0;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .15);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    list-style:none;
+    background-color:white;
+}
+.sp{
+	display:inline-block;
+	text-decoration:none;
+	position:absolute;
+	height:100%;
+	left:3px;
+	right:3px;
+	font-size:16px;
+	color:black;
+	text-align:center;
+}
+.header__userInfo{
+    position: relative;
+    height:59px;
+    width:100%;
+   border-bottom: 1px solid #f0f0f0;
+}
+.message_box #my_messages{
+	position:relative;
+	height:62px;
+	width:30px;
+	display:block;
+	cursor:pointer;
+}
+.message_box{
+	vertical-align:middle;
+	width:28px;
+}
+/* 新添加的部分 */
+/* 教师详情容器样式 */
+.container {
+    margin-top: 80px; /* 确保教师详情不被导航栏遮挡 */
+    padding: 20px;
+}
+
+.teacher-details {
+	position:relative;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-info-container {
+	border-style: solid;
+	border-left-width: 15px;
+    display: flex;
+    align-items: flex-start; /* 顶部对齐 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.teacher-avatar {
+    width: 150px; /* 调整教师头像的宽度 */
+    height: 150px; /* 调整教师头像的高度 */
+    margin-right: 40px; /* 增加头像和描述之间的间距 */
+    border-radius: 50%; /* 将头像设置为圆形 */
+    overflow: hidden; /* 隐藏超出头像容器的部分 */
+}
+
+.teacher-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 缩放图片以填充容器，并裁剪超出部分 */
+}
+
+.teacher-description {
+    flex-grow: 1; /* 使描述部分占据剩余空间 */
+}
+
+/* 评论框样式 */
+.comment-box {
+    margin-top: 20px;
+}
+
+.comment-box textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.comment-controls {
+    display: flex;
+    align-items: center;
+}
+
+.star-select {
+    margin-right: 10px;
+}
+
+.comment-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* 添加按钮微光效果的过渡动画 */
+}
+
+.comment-submit:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5); /* 在按钮周围添加微光效果 */
+}
+
+/* 评论区样式 */
+.comment-area {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.comment {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-box {
+    margin-bottom: 20px; /* 增加发送评论框和评论区之间的间距 */
+}
+
+/* 单独的评论框样式 */
+.comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* 申请补课按钮样式 */
+.apply-submit {
+    background-color: #28a745; /* 绿色背景色 */
+    color: #fff; /* 白色文字 */
+    border: none; /* 无边框 */
+    padding: 10px 20px; /* 内边距 */
+    font-size: 16px; /* 字体大小 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标样式 */
+    transition: box-shadow 0.3s ease; /* 过渡效果 */
+    text-decoration: none; /* 去掉超链接下划线 */
+    display: inline-block; /* 行内块元素 */
+}
+
+.apply-submit:hover {
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5); /* 鼠标悬停时的阴影效果 */
+}
+.back_chat{
+	position:absolute;
+	top:4px;
+	cursor:pointer;
+	left:5px;
+	width:25px;
+	height:25px;
+}
